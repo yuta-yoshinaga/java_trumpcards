@@ -1,2 +1,3 @@
-special-vendored-path/* linguist-vendored
-project-docs/* linguist-documentation
+bin/* linguist-vendored
+Doxygen/* linguist-vendored
+docs/* linguist-documentation
