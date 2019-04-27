@@ -1,4 +1,5 @@
 <map id="jp.gr.java_conf.yuta_yoshinaga.java_trumpcards.TrumpCards.shuffle" name="jp.gr.java_conf.yuta_yoshinaga.java_trumpcards.TrumpCards.shuffle">
-<area shape="rect" id="node2" href="$classjp_1_1gr_1_1java__conf_1_1yuta__yoshinaga_1_1java__trumpcards_1_1_black_jack.html#aecf1c840d9643b4809cd5e93710256a4" title="ゲーム初期化 " alt="" coords="244,5,435,61"/>
+<area shape="rect" id="node2" href="$classjp_1_1gr_1_1java__conf_1_1yuta__yoshinaga_1_1java__trumpcards_1_1_black_jack.html#aecf1c840d9643b4809cd5e93710256a4" title="ゲーム初期化 " alt="" coords="244,45,435,101"/>
 <area shape="rect" id="node3" href="$classjp_1_1gr_1_1java__conf_1_1yuta__yoshinaga_1_1java__trumpcards_1_1_black_jack.html#a8ec4c341c5db71243c0916980549868d" title="コンストラクタ " alt="" coords="483,5,673,61"/>
+<area shape="rect" id="node4" href="$classjp_1_1gr_1_1java__conf_1_1yuta__yoshinaga_1_1java__trumpcards_1_1_black_jack_main.html#af395b1fc47f9ef84101a3c13c2310ed6" title="メインメソッド " alt="" coords="483,85,673,141"/>
 </map>

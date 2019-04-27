@@ -1,6 +1,8 @@
 <map id="jp.gr.java_conf.yuta_yoshinaga.java_trumpcards.BlackJack.getScore" name="jp.gr.java_conf.yuta_yoshinaga.java_trumpcards.BlackJack.getScore">
 <area shape="rect" id="node2" href="$classjp_1_1gr_1_1java__conf_1_1yuta__yoshinaga_1_1java__trumpcards_1_1_black_jack.html#a3db7b3231ab583af54941a41517954ea" title="ディーラーヒット " alt="" coords="244,5,435,61"/>
-<area shape="rect" id="node4" href="$classjp_1_1gr_1_1java__conf_1_1yuta__yoshinaga_1_1java__trumpcards_1_1_black_jack.html#a4b8f2248ac868b5d3b9506fb0ece0ea2" title="プレイヤーヒット " alt="" coords="721,39,912,95"/>
-<area shape="rect" id="node5" href="$classjp_1_1gr_1_1java__conf_1_1yuta__yoshinaga_1_1java__trumpcards_1_1_black_jack.html#a26f4a11e36c237ec64f08010b8ea0a01" title="ゲーム勝敗判定 " alt="" coords="244,136,435,192"/>
+<area shape="rect" id="node4" href="$classjp_1_1gr_1_1java__conf_1_1yuta__yoshinaga_1_1java__trumpcards_1_1_black_jack.html#a4b8f2248ac868b5d3b9506fb0ece0ea2" title="プレイヤーヒット " alt="" coords="721,71,912,127"/>
+<area shape="rect" id="node6" href="$classjp_1_1gr_1_1java__conf_1_1yuta__yoshinaga_1_1java__trumpcards_1_1_black_jack.html#a26f4a11e36c237ec64f08010b8ea0a01" title="ゲーム勝敗判定 " alt="" coords="244,136,435,192"/>
+<area shape="rect" id="node7" href="$classjp_1_1gr_1_1java__conf_1_1yuta__yoshinaga_1_1java__trumpcards_1_1_black_jack_main.html#aefaaf9d1dfc330af971cb1a167a9e8d9" title="ステータス表示 " alt="" coords="483,136,673,192"/>
 <area shape="rect" id="node3" href="$classjp_1_1gr_1_1java__conf_1_1yuta__yoshinaga_1_1java__trumpcards_1_1_black_jack.html#a53f37ae6f1388143c70a8b138c6c2443" title="プレイヤースタンド " alt="" coords="483,5,673,61"/>
+<area shape="rect" id="node5" href="$classjp_1_1gr_1_1java__conf_1_1yuta__yoshinaga_1_1java__trumpcards_1_1_black_jack_main.html#af395b1fc47f9ef84101a3c13c2310ed6" title="メインメソッド " alt="" coords="960,71,1151,127"/>
 </map>
