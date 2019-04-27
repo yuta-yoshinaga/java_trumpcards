@@ -1,0 +1,5 @@
+<map id="jp.gr.java_conf.yuta_yoshinaga.java_trumpcards.BlackJack.gameJudgment" name="jp.gr.java_conf.yuta_yoshinaga.java_trumpcards.BlackJack.gameJudgment">
+<area shape="rect" id="node2" href="$classjp_1_1gr_1_1java__conf_1_1yuta__yoshinaga_1_1java__trumpcards_1_1_black_jack.html#a23b680e89ca3a4c306576ba0a7debfac" title="手札から現在のスコア取得 " alt="" coords="244,5,435,61"/>
+<area shape="rect" id="node3" href="$classjp_1_1gr_1_1java__conf_1_1yuta__yoshinaga_1_1java__trumpcards_1_1_player.html#a6fa54bc94ad8959fbf76abb1107c7385" title="ゲッター " alt="" coords="244,85,435,141"/>
+<area shape="rect" id="node4" href="$classjp_1_1gr_1_1java__conf_1_1yuta__yoshinaga_1_1java__trumpcards_1_1_player.html#ae905e0de5c47509076823375e6995806" title="ゲッター " alt="" coords="244,165,435,221"/>
+</map>
