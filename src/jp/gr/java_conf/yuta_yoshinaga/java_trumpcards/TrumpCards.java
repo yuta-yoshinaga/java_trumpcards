@@ -26,9 +26,9 @@ import java.util.Collections;
 ////////////////////////////////////////////////////////////////////////////////
 public class TrumpCards {
 	public static final int DEF_CARD_CNT = (13 * 4);
-	private ArrayList<Card> deck;							//!< 山札
-	private int deckDrowCnt;								//!< 山札配った枚数
-	private int deckCnt;									//!< 山札枚数
+	private ArrayList<Card> deck; //!< 山札
+	private int deckDrowCnt; //!< 山札配った枚数
+	private int deckCnt; //!< 山札枚数
 
 	////////////////////////////////////////////////////////////////////////////////
 	///	@brief			コンストラクタ
@@ -39,8 +39,7 @@ public class TrumpCards {
 	///	@date			2019.04.27
 	///
 	////////////////////////////////////////////////////////////////////////////////
-	public TrumpCards(int jokerCnt)
-	{
+	public TrumpCards(int jokerCnt) {
 		this.deckCnt = DEF_CARD_CNT + jokerCnt;
 		this.cardsInit();
 		this.deckInit();
@@ -129,29 +128,28 @@ public class TrumpCards {
 	///	@date			2019.04.27
 	///
 	////////////////////////////////////////////////////////////////////////////////
-	private void cardsInit()
-	{
+	private void cardsInit() {
 		this.deck = new ArrayList<Card>();
-		for(int i = 0; i < this.deckCnt; i++){
+		for (int i = 0; i < this.deckCnt; i++) {
 			Card curCard = new Card();
 			curCard.setDrowFlag(false);
-			if(0 <= i && i <= 12){
+			if (0 <= i && i <= 12) {
 				// *** スペード *** //
 				curCard.setType(Card.DEF_CARD_TYPE_SPADE);
 				curCard.setValue(i + 1);
-			}else if(13 <= i && i <= 25){
+			} else if (13 <= i && i <= 25) {
 				// *** クローバー *** //
 				curCard.setType(Card.DEF_CARD_TYPE_CLOVER);
-				curCard.setValue((i- 13) + 1);
-			}else if(26 <= i && i <= 38){
+				curCard.setValue((i - 13) + 1);
+			} else if (26 <= i && i <= 38) {
 				// *** ハート *** //
 				curCard.setType(Card.DEF_CARD_TYPE_HEART);
 				curCard.setValue((i - 26) + 1);
-			}else if(39 <= i && i <= 51){
+			} else if (39 <= i && i <= 51) {
 				// *** ダイアモンド *** //
 				curCard.setType(Card.DEF_CARD_TYPE_DIAMOND);
 				curCard.setValue((i - 39) + 1);
-			}else{
+			} else {
 				// *** ジョーカー *** //
 				curCard.setType(Card.DEF_CARD_TYPE_JOKER);
 				curCard.setValue((i - 52) + 1);
@@ -168,8 +166,7 @@ public class TrumpCards {
 	///	@date			2019.04.27
 	///
 	////////////////////////////////////////////////////////////////////////////////
-	private void deckInit()
-	{
+	private void deckInit() {
 		this.deckDrowFlagInit();
 		this.deckDrowCnt = 0;
 	}
@@ -182,26 +179,10 @@ public class TrumpCards {
 	///	@date			2019.04.27
 	///
 	////////////////////////////////////////////////////////////////////////////////
-	private void deckDrowFlagInit()
-	{
-		for(int i = 0; i < this.deckCnt; i++){
+	private void deckDrowFlagInit() {
+		for (int i = 0; i < this.deckCnt; i++) {
 			this.deck.get(i).setDrowFlag(false);
 		}
-	}
-
-	////////////////////////////////////////////////////////////////////////////////
-	///	@brief			山札シャッフルローカル
-	///	@fn				private shuffleLocal(array: any): any
-	///	@param[in]		array: any
-	///	@return			シャッフル済み配列
-	///	@author			Yuta Yoshinaga
-	///	@date			2019.04.27
-	///
-	////////////////////////////////////////////////////////////////////////////////
-	private ArrayList<Card> shuffleLocal(ArrayList<Card> deck)
-	{
-		Collections.shuffle(deck);
-		return deck;
 	}
 
 	////////////////////////////////////////////////////////////////////////////////
@@ -212,9 +193,8 @@ public class TrumpCards {
 	///	@date			2019.04.27
 	///
 	////////////////////////////////////////////////////////////////////////////////
-	public void shuffle()
-	{
-		this.deck = this.shuffleLocal(this.deck);
+	public void shuffle() {
+		Collections.shuffle(this.deck);
 		this.deckDrowFlagInit();
 		this.deckDrowCnt = 0;
 	}
@@ -227,10 +207,9 @@ public class TrumpCards {
 	///	@date			2019.04.27
 	///
 	////////////////////////////////////////////////////////////////////////////////
-	public Card drowCard()
-	{
+	public Card drowCard() {
 		Card res = null;
-		if(this.deckDrowCnt < this.deckCnt){
+		if (this.deckDrowCnt < this.deckCnt) {
 			this.deck.get(this.deckDrowCnt).setDrowFlag(true);
 			res = this.deck.get(this.deckDrowCnt++);
 		}

@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////////////////////////
-///	@file			Card.java
-///	@brief			カードクラス
+///	@file			Player.java
+///	@brief			プレイヤークラス
 ///	@author			Yuta Yoshinaga
 ///	@date			2019.04.27
 ///	$Version:		$
@@ -14,145 +14,107 @@
 ///   当方は一切その責任を負いません。
 ///
 ////////////////////////////////////////////////////////////////////////////////
-
 package jp.gr.java_conf.yuta_yoshinaga.java_trumpcards;
 
+import java.util.ArrayList;
+
 ////////////////////////////////////////////////////////////////////////////////
-///	@class		Card
-///	@brief		カードクラス
+///	@class		Player
+///	@brief		プレイヤークラス
 ///
 ////////////////////////////////////////////////////////////////////////////////
-public class Card {
-	public static final int DEF_CARD_TYPE_JOKER = 0;
-	public static final int DEF_CARD_TYPE_SPADE = 1;
-	public static final int DEF_CARD_TYPE_CLOVER = 2;
-	public static final int DEF_CARD_TYPE_HEART = 3;
-	public static final int DEF_CARD_TYPE_DIAMOND = 4;
-	public static final int DEF_CARD_TYPE_MIN = DEF_CARD_TYPE_JOKER;
-	public static final int DEF_CARD_TYPE_MAX = DEF_CARD_TYPE_DIAMOND;
-
-	public static final int DEF_CARD_VALUE_JOKER = 0;
-	public static final int DEF_CARD_VALUE_MIN = 0;
-	public static final int DEF_CARD_VALUE_MAX = 13;
-
-	private int type; //!< カード種類
-	private int value; //!< カード値
-	private boolean drowFlag; //!< カード払い出しフラグ
-	private String ext; //!< カード拡張情報など(カード別にメッセージを出す場合など)
+public class Player {
+	private ArrayList<Card> cards; //!< プレイヤーカード
+	private int cardsCnt; //!< プレイヤーカード枚数
+	private int score; //!< プレイヤースコア
 
 	////////////////////////////////////////////////////////////////////////////////
 	///	@brief			コンストラクタ
-	///	@fn				public Card()
+	///	@fn				public Player()
 	///	@return			ありません
 	///	@author			Yuta Yoshinaga
 	///	@date			2019.04.27
 	///
 	////////////////////////////////////////////////////////////////////////////////
-	public Card() {
-		this.type = DEF_CARD_TYPE_JOKER;
-		this.value = DEF_CARD_VALUE_JOKER;
-		this.drowFlag = false;
-		this.ext = "";
+	public Player() {
+		this.cards = new ArrayList<Card>();
+		this.cardsCnt = 0;
+		this.score = 0;
 	}
 
 	////////////////////////////////////////////////////////////////////////////////
 	///	@brief			ゲッター
-	///	@fn				public int getType()
-	///	@return			カード種類
+	///	@fn				ArrayList<Card> getCards()
+	///	@return			プレイヤーカード
 	///	@author			Yuta Yoshinaga
 	///	@date			2019.04.27
 	///
 	////////////////////////////////////////////////////////////////////////////////
-	public int getType() {
-		return type;
+	public ArrayList<Card> getCards() {
+		return cards;
 	}
 
 	////////////////////////////////////////////////////////////////////////////////
 	///	@brief			セッター
-	///	@fn				public void setType(int type)
-	///	@param[in]		int type		カード種類
+	///	@fn				public void setCards(ArrayList<Card> cards)
+	///	@param[in]		ArrayList<Card> cards プレイヤーカード
 	///	@return			ありません
 	///	@author			Yuta Yoshinaga
 	///	@date			2019.04.27
 	///
 	////////////////////////////////////////////////////////////////////////////////
-	public void setType(int type) {
-		this.type = type;
+	public void setCards(ArrayList<Card> cards) {
+		this.cards = cards;
 	}
 
 	////////////////////////////////////////////////////////////////////////////////
 	///	@brief			ゲッター
-	///	@fn				public getValue(): number
-	///	@return			カード値
+	///	@fn				public int getCardsCnt()
+	///	@return			プレイヤーカード枚数
 	///	@author			Yuta Yoshinaga
 	///	@date			2019.04.27
 	///
 	////////////////////////////////////////////////////////////////////////////////
-	public int getValue() {
-		return value;
+	public int getCardsCnt() {
+		return cardsCnt;
 	}
 
 	////////////////////////////////////////////////////////////////////////////////
 	///	@brief			セッター
-	///	@fn				public void setValue(int value)
-	///	@param[in]		int value		カード値
+	///	@fn				public void setCardsCnt(int cardsCnt)
+	///	@param[in]		int cardsCnt プレイヤーカード枚数
 	///	@return			ありません
 	///	@author			Yuta Yoshinaga
 	///	@date			2019.04.27
 	///
 	////////////////////////////////////////////////////////////////////////////////
-	public void setValue(int value) {
-		this.value = value;
+	public void setCardsCnt(int cardsCnt) {
+		this.cardsCnt = cardsCnt;
 	}
 
 	////////////////////////////////////////////////////////////////////////////////
 	///	@brief			ゲッター
-	///	@fn				public boolean getDrowFlag()
-	///	@return			カード払い出しフラグ
+	///	@fn				public int getScore()
+	///	@return			プレイヤースコア
 	///	@author			Yuta Yoshinaga
 	///	@date			2019.04.27
 	///
 	////////////////////////////////////////////////////////////////////////////////
-	public boolean getDrowFlag() {
-		return drowFlag;
+	public int getScore() {
+		return score;
 	}
 
 	////////////////////////////////////////////////////////////////////////////////
 	///	@brief			セッター
-	///	@fn				public void setDrowFlag(boolean drowFlag)
-	///	@param[in]		boolean drowFlag		カード払い出しフラグ
+	///	@fn				public void setScore(int score)
+	///	@param[in]		int score プレイヤースコア
 	///	@return			ありません
 	///	@author			Yuta Yoshinaga
 	///	@date			2019.04.27
 	///
 	////////////////////////////////////////////////////////////////////////////////
-	public void setDrowFlag(boolean drowFlag) {
-		this.drowFlag = drowFlag;
-	}
-
-	////////////////////////////////////////////////////////////////////////////////
-	///	@brief			ゲッター
-	///	@fn				public String getExt()
-	///	@return			カード払い出しフラグ
-	///	@author			Yuta Yoshinaga
-	///	@date			2019.04.27
-	///
-	////////////////////////////////////////////////////////////////////////////////
-	public String getExt() {
-		return ext;
-	}
-
-	////////////////////////////////////////////////////////////////////////////////
-	///	@brief			セッター
-	///	@fn				public void setExt(String ext)
-	///	@param[in]		String ext		カード拡張情報など(カード別にメッセージを出す場合など)
-	///	@return			ありません
-	///	@author			Yuta Yoshinaga
-	///	@date			2019.04.27
-	///
-	////////////////////////////////////////////////////////////////////////////////
-	public void setExt(String ext) {
-		this.ext = ext;
+	public void setScore(int score) {
+		this.score = score;
 	}
 
 }
